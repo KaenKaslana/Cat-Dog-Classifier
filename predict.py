@@ -41,6 +41,6 @@ def predict_image(image_path):
     return predicted_class
 
 if __name__ == '__main__':
-    img_path = 'image.png'  # 替换为您要预测的图像路径
+    img_path = 'black_cat.png'  # 替换为您要预测的图像路径
     result = predict_image(img_path)
     print(f"模型预测结果：{result}")
