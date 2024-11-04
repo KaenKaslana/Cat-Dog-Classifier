@@ -7,7 +7,7 @@ from PIL import Image
 model = models.vgg16(pretrained=False)
 num_ftrs = model.classifier[6].in_features
 model.classifier[6] = nn.Linear(num_ftrs, 2)  # 猫狗二分类
-model.load_state_dict(torch.load('vgg16_cats_dogs.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('model/vgg16_cats_dogs.pth', map_location=torch.device('cpu')))
 model.eval()
 
 # 检查是否可用 GPU

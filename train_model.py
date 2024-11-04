@@ -146,4 +146,4 @@ if __name__ == '__main__':
     model = train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_sizes, device, num_epochs=10)
 
     # 保存模型
-    torch.save(model.state_dict(), 'vgg16_cats_dogs.pth')
+    torch.save(model.state_dict(), 'model/vgg16_cats_dogs.pth')
