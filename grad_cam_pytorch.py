@@ -27,7 +27,7 @@ transform = transforms.Compose([
 ])
 
 # 加载并预处理图像
-img_path = 'white_cat.png'  # 替换为您的图像路径
+img_path = 'black_cat.png'  # 替换为您的图像路径
 img = Image.open(img_path).convert('RGB')
 input_tensor = transform(img).unsqueeze(0).to(device)
 
@@ -75,4 +75,4 @@ plt.imshow(superimposed_img)
 plt.show()
 
 # 可选：保存结果
-plt.imsave('white_cam_pytorch.jpg', superimposed_img)
+plt.imsave('black_cam_pytorch.jpg', superimposed_img)

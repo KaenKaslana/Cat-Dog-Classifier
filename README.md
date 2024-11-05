@@ -39,7 +39,7 @@ Project Structure
 ├── predict.py             # Script to predict new images
 ├── vgg16_cats_dogs.pth    # Trained model weights (generated after training)
 ├── README.md              # This README file
-Data Preparation
+## Data Preparation
 1. Organize Your Dataset
 Prepare a dataset of cat and dog images organized into separate folders:
 
@@ -78,7 +78,7 @@ path_to_split_dataset/
         dogs/
             dog101.jpg
             ...
-Training the Model
+## Training the Model
 1. Modify train_model.py
 Set the Data Directory:
 data_dir = 'path_to_split_dataset'  # Replace with your actual path
@@ -89,7 +89,7 @@ python train_model.py
 Output:
 
 The trained model weights will be saved as vgg16_cats_dogs.pth.
-Applying Grad-CAM
+## Applying Grad-CAM
 1. Modify grad_cam.py
 Set the Image Path:
 img_path = 'path_to_image'  # Replace with the path to your image
@@ -98,7 +98,7 @@ python grad_cam.py
 Output:
 
 A visualization image cam.jpg showing the heatmap overlay on the original image.
-Making Predictions
+## Making Predictions
 1. Modify predict.py
 Set the Image Path:
 img_path = 'path_to_image'  # Replace with the path to your image
@@ -108,7 +108,7 @@ Output:
 
 The script will print whether the image is predicted to be a cat or a dog.
 模型预测结果：cat
-Acknowledgments
+## Acknowledgments
 This project utilizes the pre-trained VGG16 model from PyTorch's model zoo.
 
 Special thanks to the open-source community for providing resources and tools that make projects like this possible.
