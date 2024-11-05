@@ -132,7 +132,7 @@ use_cuda = torch.cuda.is_available()
 grad_cam = GradCAM(model=model, target_layer_names=["29"], use_cuda=use_cuda)
 
 # 加载图像
-img_path = 'black_cat.png'  # 替换为您的图像路径
+img_path = 'white_cat.png'  # 替换为您的图像路径
 img = Image.open(img_path).convert('RGB')
 img_tensor = preprocess(img)
 img_variable = img_tensor.unsqueeze(0)
@@ -144,4 +144,4 @@ mask = grad_cam(img_variable)
 heatmap = cv2.applyColorMap(np.uint8(255*mask), cv2.COLORMAP_JET)
 img = cv2.cvtColor(np.array(img.resize((224, 224))), cv2.COLOR_RGB2BGR)
 result = heatmap * 0.3 + img * 0.5
-cv2.imwrite('black_cam.jpg', result)
+cv2.imwrite('white_cam.jpg', result)
