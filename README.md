@@ -30,7 +30,7 @@ Before running the scripts, ensure you have the following installed:
 
 Install the required packages using pip:
 
-```bash
+
 pip install torch torchvision numpy matplotlib opencv-python pillow
 Project Structure
 ├── split_dataset.py       # Script to split data into training and validation sets
